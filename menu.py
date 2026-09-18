@@ -1,19 +1,19 @@
-category = input("Выберите категорию: ")
+category = input("Выберите категорию: ")  # .strip().lowe()
 
 match category:
     case "напиток":
-        drink = input("чай кофе сок")
+        drink = input("чай/кофе/сок")
         match drink:
             case "чай":
                 print(10)
             case "кофе":
-                print(10)
+                print(30)
             case "сок":
-                print(10)
+                print(30)
             case _:
                 print("такого напитка нет")
     case "суп":
-        soup = input("борщ щи суп-пюре")
+        soup = input("борщ/щи/суп-пюре")
         match soup:
             case "борщ":
                 print(40)
@@ -24,7 +24,7 @@ match category:
             case _:
                 print("такого супа нет")
     case "десерт":
-        desert = input("торт мороженое фрукты")
+        desert = input("торт/мороженое/фрукты")
         match desert:
             case "торт":
                 print(40)
