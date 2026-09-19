@@ -1,8 +1,8 @@
 import re
 
-sum_text = input("Enter text: ").strip().lower()
+sum_text = input("Enter text: ").strip().lower().replace("\\s+", ' ')
 
-# naive
+# v1 - naive
 # if sum_text.count("руб") != 1:
 #     print("Некорректный формат суммы")
 #     exit()
@@ -27,8 +27,9 @@ sum_text = input("Enter text: ").strip().lower()
 # formatted_total = f"{total:.2f} ₽"
 # print(formatted_total)
 
-# re.fullmatch
-pattern = r"(\d+) руб(?: (\d{2}) коп)?"
+# v2 - re.fullmatch
+clean_text = re.sub(r'\s+', ' ', sum_text)
+pattern = r"(\d+) руб(?: (\d{1,2}) коп)?"
 match = re.fullmatch(pattern, sum_text)
 
 if not match:
