@@ -30,7 +30,7 @@ sum_text = input("Enter text: ").strip().lower().replace("\\s+", ' ')
 # v2 - re.fullmatch
 clean_text = re.sub(r'\s+', ' ', sum_text)
 pattern = r"(\d+) руб(?: (\d{1,2}) коп)?"
-match = re.fullmatch(pattern, sum_text)
+match = re.fullmatch(pattern, clean_text)
 
 if not match:
     print("Некорректный формат суммы")
