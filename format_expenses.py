@@ -1,6 +1,6 @@
 import re
 
-sum_text = input("Enter text: ").strip().lower().replace("\\s+", ' ')
+sum_text = input("Enter text: ").strip().lower()
 
 # v1 - naive
 # if sum_text.count("руб") != 1:
