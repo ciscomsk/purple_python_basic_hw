@@ -1,5 +1,6 @@
 import re
 
+# можно поддержать другие слова для единиц - например рублей/копеек (вместе с руб/коп)
 sum_text = input("Enter text: ").strip().lower()
 
 # v1 - naive
@@ -37,7 +38,7 @@ if not match:
     exit()
 
 rub = match.group(1)
-cop = (match.group(2) or "").zfill(2)  # zfill(2) - если 1 цифра для копеек: 5 коп - будет 05 коп
+cop = (match.group(2) or "").zfill(2)  # zfill(2) - если 1 цифра для копеек: 5 - будет 05
 total = f"{rub}.{cop}"
 formatted_total = f"{float(total):.2f} ₽"
 print(formatted_total)
