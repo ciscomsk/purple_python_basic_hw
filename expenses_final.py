@@ -36,7 +36,7 @@ def get_total(exp: list[int]) -> int:
 
 def get_average(exp: list[int]) -> float:
     if not exp:
-        print("Expenses is empty")
+        print("Expenses is empty")  # можно вывести сообщение
         return 0
     return sum(exp) / len(exp)
 
