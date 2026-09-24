@@ -1,7 +1,7 @@
 import sys
 
 if len(sys.argv) < 3:
-    print("Нежно 2 аргумента")
+    print("Нужно 2 аргумента")
     exit()
 
 # print(sys.argv)
