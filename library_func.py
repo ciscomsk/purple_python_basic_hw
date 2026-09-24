@@ -1,5 +1,11 @@
 import sys
 
+if len(sys.argv) < 3:
+    print("Нежно 2 аргумента")
+    exit()
+
+print(len(sys.argv))
+print(sys.argv)
 action = sys.argv[1]
 action_arg = sys.argv[2]
 
