@@ -53,4 +53,5 @@ try:
         case _:
             raise InvalidCommandError("Неизвестная команда")
 except (EmptyFilterError, InvalidSortParameterError, InvalidCommandError) as e:
-    print(e)
+    # print(e)
+    print(f"{type(e).__name__}: {e}")
